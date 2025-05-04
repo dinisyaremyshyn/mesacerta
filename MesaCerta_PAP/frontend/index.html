@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mesa Certa - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">Mesa Certa</h1>
+  </header>
+
+  <main>
+    <div class="login-box">
+      <h2>Iniciar Sessão</h2>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Palavra-passe" />
+      <button onclick="login()">Login</button>
+      <div class="links">
+        <a href="#" onclick="showRecover()">Esqueceste-te da password?</a>
+        <a href="#" onclick="showRegister()">Não tens conta? Regista-te</a>
+      </div>
+    </div>
+
+    <div class="recover-box hidden">
+      <h2>Recuperar Palavra-passe</h2>
+      <input type="email" id="recoverEmail" placeholder="Email" />
+      <button onclick="sendRecoveryLink()">Enviar link de recuperação</button>
+      <button onclick="backToLogin()">Voltar</button>
+    </div>
+
+    <div class="register-box hidden">
+      <h2>Criar Conta</h2>
+      <input type="text" placeholder="Nome completo" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Palavra-passe" />
+      <button>Criar Conta</button>
+      <button onclick="backToLogin()">Voltar</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mesa Certa - Principal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">Mesa Certa</h1>
+    <button id="logoutBtn">Sair</button>
+  </header>
+
+  <section class="filters">
+    <h2>Procurar Estabelecimentos</h2>
+    <input type="text" id="searchName" placeholder="Nome do local" />
+    <select id="location">
+      <option value="">Localização</option>
+      <option value="Lisboa">Lisboa</option>
+      <option value="Porto">Porto</option>
+    </select>
+    <select id="type">
+      <option value="">Tipo</option>
+      <option value="restaurante">Restaurante</option>
+      <option value="café">Café</option>
+    </select>
+    <select id="price">
+      <option value="">Preço</option>
+      <option value="baixo">€</option>
+      <option value="medio">€€</option>
+      <option value="alto">€€€</option>
+    </select>
+    <select id="rating">
+      <option value="">Classificação</option>
+      <option value="5">★★★★★</option>
+      <option value="4">★★★★</option>
+    </select>
+    <label><input type="checkbox" id="openNow"> Aberto agora</label>
+    <button onclick="applyFilters()">Procurar</button>
+  </section>
+
+  <section id="results"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
