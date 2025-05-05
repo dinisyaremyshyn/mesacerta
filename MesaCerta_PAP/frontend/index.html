@@ -3,43 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mesa Certa - Login</title>
+  <title>Mesa Certa</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <header>
-    <h1 class="logo">Mesa Certa</h1>
-  </header>
+  <img class ="image-gradient" src="gradient.png" alt="gradient">
+  <div class="layer-blur"></div>
 
-  <main>
-    <div class="login-box">
-      <h2>Iniciar Sessão</h2>
-      <input type="email" id="email" placeholder="Email" />
-      <input type="password" id="password" placeholder="Palavra-passe" />
-      <button onclick="login()">Login</button>
-      <div class="links">
-        <a href="#" onclick="showRecover()">Esqueceste-te da password?</a>
-        <a href="#" onclick="showRegister()">Não tens conta? Regista-te</a>
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down"  data-aos-duration="1500" class="logo">MESA CERTA</h1>
+
+      <nav>
+        <a data-aos="fade-down"  data-aos-duration="1500" href="#">COMPANY</a>
+        <a data-aos="fade-down"  data-aos-duration="2000" href="#">FEATURES</a>
+        <a data-aos="fade-down"  data-aos-duration="2500" href="#">RESOURCES</a>
+        <a data-aos="fade-down"  data-aos-duration="3000" href="#">DOCS</a>
+      </nav>
+      
+      <button data-aos="fade-down"  data-aos-duration="1500" class="btn-signing">INICIAR SESSAO</button>
+    </header>
+
+    <main>
+      <div class="content">
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" data-aos-duration="1500" class="tag-box">
+          <div class="tag">INTRODUZIR </div>
+        </div>
+
+        <h1 data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" data-aos-duration="2000">NOS TRATAMOS DA ESCOLHA, <br>TU SO VAIS</h1>
+
+        <p data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" data-aos-duration="2500" class="description">
+          Navega, escolhe e aproveita. O resto é connosco. (Exceto o pagamento!)
+        </p>
+
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" data-aos-duration="3000" class="buttons">
+          <a href="#" class="btn-get-started">Documentaion &gt;</a>
+          <a href="#" class="btn-signing-main">Get started &gt;</a>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <div class="recover-box hidden">
-      <h2>Recuperar Palavra-passe</h2>
-      <input type="email" id="recoverEmail" placeholder="Email" />
-      <button onclick="sendRecoveryLink()">Enviar link de recuperação</button>
-      <button onclick="backToLogin()">Voltar</button>
-    </div>
+    <spline-viewer data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
+    data-aos-offset="0" data-aos-duration="3000" class="donut-3d" url="https://prod.spline.design/yxgZmvhrqzUMJ2lk/scene.splinecode"></spline-viewer>
+  
+  </div>
 
-    <div class="register-box hidden">
-      <h2>Criar Conta</h2>
-      <input type="text" placeholder="Nome completo" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Palavra-passe" />
-      <button>Criar Conta</button>
-      <button onclick="backToLogin()">Voltar</button>
-    </div>
-  </main>
-
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
   <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
