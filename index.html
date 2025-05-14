@@ -19,25 +19,30 @@
 
       <nav>
         <a data-aos="fade-down" data-aos-duration="1500" href="#">PROCURAR</a>
-        <a data-aos="fade-down" data-aos-duration="2000" href="#">CONTACTO</a>
-        <a data-aos="fade-down" data-aos-duration="2500" href="#">FAVORITOS</a>
+        <a data-aos="fade-down" data-aos-duration="2000" href="#">POLÍTICAS</a>
+        <a data-aos="fade-down" data-aos-duration="2500" href="#CONTATO">CONTACTO</a>
+        <a data-aos="fade-down" data-aos-duration="3000" href="#janela-modal" onclick="abrirModal()">FAVORITOS</a>
       </nav>
+
+      <div id="janela-modal">
+        <div id="modal">
+          <button id="fechar">X</button>
+          <h1>Favoritos</h1>
+          <p>Aqui estarão os seus itens favoritos!</p>
+        </div>
+      </div>
+
 
       <a href="login.html" data-aos="fade-down" data-aos-duration="1500" class="btn-signing">
         INICIAR SESSÃO
       </a>
-      
     </header>
 
     <main>
       <div class="content">
-        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
-          data-aos-duration="1500" class="tag-box">
-          <div class="tag">INTRODUZIR </div>
-        </div>
 
         <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
-          data-aos-duration="2000">NÓS TRATAMOS DA ESCOLHA, <br>TU SO VAIS</h1>
+          data-aos-duration="2000">NÓS TRATAMOS DA ESCOLHA, <br>TU SÓ VAIS</h1>
 
         <p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
           data-aos-duration="2500" class="description">
@@ -46,7 +51,6 @@
 
         <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
           data-aos-duration="3000" class="buttons">
-          <a href="#" class="btn-get-started">Política &gt;</a>
           <a href="#" class="btn-signing-main">Começar &gt;</a>
         </div>
       </div>
@@ -61,9 +65,46 @@
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+
+  <section id="CONTATO" class="contacto">
+    <h2 class="Contatos-titulo">Entre em contacto</h2>
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+      <div class="grupo-form">
+        <input name="nome" placeholder="Nome" class="campo-form" id="nome" required>
+      </div>
+      <div class="grupo-form">
+        <textarea name="mensagem" class="campo-form" placeholder="Digite a sua Mensagem" rows="6" id="mensagem"
+          required></textarea>
+      </div>
+
+      <button type="submit" class="botao-form">Enviar Whatsapp</button>
+    </form>
+
+    <form class="formulario-contato" id="form-email" action="https://formsubmit.co/41903@aecoimbraoeste.pt"
+      method="POST">
+      <div class="grupo-form">
+        <input name="email" type="email" placeholder="Email" class="campo-form" required>
+      </div>
+      <div class="grupo-form">
+        <textarea name="mensagem" class="campo-form" placeholder="Digite a sua Mensagem" rows="6" required></textarea>
+      </div>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://127.0.0.1:5500/index.html">
+
+      <button type="submit" class="botao-form">Enviar Email</button>
+    </form>
+  </section>
+
+  <section>
+    <h1 id="politica" class="politica">Políticas e privacidade</h1>
+
+    <h2 id="politica-texto" class="politica-texto"></h2>
+      
+  </section>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>
